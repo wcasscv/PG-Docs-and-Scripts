@@ -1,0 +1,28 @@
+
+{
+  "dashboard": {
+    "id": null,
+    "title": "PostgreSQL Performance Overview",
+    "panels": [
+      {
+        "title": "CPU Usage",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "rate(node_cpu_seconds_total{mode!='idle'}[5m])",
+            "legendFormat": "{{cpu}}"
+          }
+        ]
+      },
+      {
+        "title": "PostgreSQL Cache Hit Ratio",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "pg_stat_database_blks_hit / (pg_stat_database_blks_hit + pg_stat_database_blks_read)"
+          }
+        ]
+      }
+    ]
+  }
+}
