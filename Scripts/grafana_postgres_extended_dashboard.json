@@ -1,0 +1,29 @@
+
+{
+  "dashboard": {
+    "title": "PostgreSQL Extended Monitoring",
+    "panels": [
+      {
+        "type": "stat",
+        "title": "Replication Lag (seconds)",
+        "targets": [
+          { "expr": "pg_replication_lag_seconds" }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Top Slow Queries",
+        "targets": [
+          { "expr": "topk(5, pg_stat_statements_mean_time)" }
+        ]
+      },
+      {
+        "type": "graph",
+        "title": "Active Connections",
+        "targets": [
+          { "expr": "pg_stat_activity_count" }
+        ]
+      }
+    ]
+  }
+}
