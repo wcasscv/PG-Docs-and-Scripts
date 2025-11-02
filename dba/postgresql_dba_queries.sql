@@ -52,6 +52,20 @@ ORDER BY last_autovacuum NULLS FIRST;
 ```
 
 5. **Top CPU-Consuming Queries (pg_stat_statements)**
+     SHOW shared_preload_libraries;
+     —— Linux: /etc/postgresql/<version>/main/postgresql.conf
+     — /var/lib/postgresql/data/postgresql.conf
+     — Mac /usr/local/var/postgres/postgresql.conf
+     Update.  shared_preload_libraries = 'pg_stat_statements'
+        OR
+     CREATE EXTENSION pg_stat_statements;
+      \dx
+      \d pg_stat_statements 
+       SHOW config_file;     output: /var/lib/postgresql/data/postgresql.conf
+     CREATE EXTENSION IF NOT EXISTS auto_explain;
+      \dx
+      \d auto_explain
+
 ```sql
 SELECT query, total_time, calls, mean_time
 FROM pg_stat_statements
