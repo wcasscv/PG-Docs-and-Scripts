@@ -1,7 +1,7 @@
 
 # 🛠️ Top 100 Useful PostgreSQL DBA Production Support Queries
 
-This markdown document compiles 100 essential PostgreSQL queries for DBA and production support tasks.
+100 essential PostgreSQL queries for DBA and production support tasks.
 
 ---
 
