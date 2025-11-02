@@ -1,0 +1,48 @@
+1. Kubernetes Deployment
+
+ PostgreSQL StatefulSet with PVCs
+
+ Prometheus, Grafana, Alertmanager as Deployments
+
+ postgres_exporter sidecar or separate Deployment
+
+ ConfigMaps + Secrets for all provisioning
+
+ TLS ingress using cert-manager
+
+ Helm-compatible or standalone YAMLs
+
+2. Terraform Infrastructure (Cloud-Ready)
+
+For AWS, GCP, and Azure:
+
+ VPC + subnets
+
+ Managed PostgreSQL (RDS / Cloud SQL / Azure PG)
+
+ EKS / GKE / AKS cluster
+
+ Deploy observability stack via Helm or raw manifests
+
+ Store DB credentials in Secret Manager / Key Vault
+
+3. Grafana Security & OAuth
+
+ TLS support via Let’s Encrypt (K8s cert-manager)
+
+ OAuth via:
+
+Google
+
+GitHub
+
+Azure AD / Okta
+
+ Admin login fallback with provisioned dashboards
+
+ Enforce HTTPS-only access
+
+
+ Terraform AWS PostgreSQL Monitoring Stack:
+ - terraform_aws_monitoring_stack.zip
+
