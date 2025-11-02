@@ -1,1 +1,10 @@
-Mac Dockerfiles for Postgres, Prometheus and Grafana
+## Mac Dockerfiles for Postgres, Prometheus and Grafana
+
+###Access Points After Launch:
+
+- PostgreSQL: localhost:5432
+
+- Prometheus: http://localhost:9090
+
+- Grafana: http://localhost:3000
+ (Default login: admin / admin)
