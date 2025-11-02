@@ -8,3 +8,5 @@
 
 - Grafana: http://localhost:3000
  (Default login: admin / admin)
+
+docker compose up -d 
