@@ -1,0 +1,20 @@
+
+- name: Apply PostgreSQL tuning
+  hosts: dbservers
+  become: yes
+  tasks:
+    - name: Backup existing config
+      copy:
+        src: /etc/postgresql/15/main/postgresql.conf
+        dest: /etc/postgresql/15/main/postgresql.conf.bak
+        remote_src: yes
+
+    - name: Deploy tuned configuration
+      copy:
+        src: postgresql_tuned.conf
+        dest: /etc/postgresql/15/main/postgresql.conf
+
+    - name: Restart PostgreSQL
+      service:
+        name: postgresql
+        state: restarted
